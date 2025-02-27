@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="内蒙1" remoteFilesAllowedToDisappearOnAutoupload="false" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="3090">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/remote-home/lwj/data1/DA/MME" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="4090ECB">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/DomainAdaptation/MME" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Ada46">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/remote-home/lwj/data1/DomainAdaptation/MME" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Ada92">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="diag@202.38.78.183:22 password">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lib1">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/data1/lwj/DomainAdaptation/MME" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lwj@127.0.0.1:6646 password">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@connect.nmb1.seetacloud.com:18929">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/DomainAdaptation/MME" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="root@connect.nmb1.seetacloud.com:40036">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/DomainAdaptation/MME" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="内蒙1">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/root/autodl-tmp/DomainAdaptation_nm1/WAL_CLA" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>
