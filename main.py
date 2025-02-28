@@ -36,9 +36,9 @@ parser.add_argument('--T', type=float, default=0.5, metavar='T',
                     help='temperature (default: 0.05)')
 parser.add_argument('--thred', type=float, default=0.8, metavar='T',
                     help='thred for pseduo (default: 0.5)')
-parser.add_argument('--lamda', type=float, default=0.1, metavar='LAM',
+parser.add_argument('--lambda_WAL', type=float, default=0.1, metavar='LAM',
                     help='lamda for WAL')
-parser.add_argument('--lambda_each', type=float, default=0.05, metavar='LAM',
+parser.add_argument('--lambda_CLA', type=float, default=0.05, metavar='LAM',
                     help='lamda for CLA')
 parser.add_argument('--save_check', action='store_true', default=False,
                     help='save checkpoint or not')
@@ -169,7 +169,7 @@ def train():
     record_file = os.path.join(record_dir,
                                '%s_test1_%s_%s_to_%s_lam_%s_lamea_%s.txt' %
                                (args.method, args.net, args.source,
-                                args.target,args.lamda,args.lambda_each))
+                                args.target,args.lambda_WAL,args.lambda_CLA))
 
     G.train()
     F1.train()
@@ -200,7 +200,7 @@ def train():
     with open(record_file, 'a') as f:
         f.write(
             '################  {} Feature Gate  Source {} to {} bs {} for learning rate of {},lr: g :{:.5f}, f:{:.5f},with lambda {}, label_Each lambda {}  thred {} T {} SGD ######################## \n'.format(
-                args.method, args.source, args.target, args.bs, args.lr,param_lr_g[0], param_lr_f[0],  args.lamda,args.lambda_each,args.thred,args.T))  # Discriminator,dc is leakyRelu
+                args.method, args.source, args.target, args.bs, args.lr,param_lr_g[0], param_lr_f[0],  args.lambda_WAL,args.lambda_CLA,args.thred,args.T))  # Discriminator,dc is leakyRelu
 
 
 
@@ -236,7 +236,7 @@ def train():
         loss_cls = criterion(out_all, label)
         loss=loss_cls
         output = G(im_data_tu)
-        loss_t = Each_labelloss(F1, output_G, output, label, args.lamda, args.lambda_each, args.thred, args.T,
+        loss_t = Each_labelloss(F1, output_G, output, label, args.lambda_WAL, args.lambda_CLA, args.thred, args.T,
                                 eta=1.0) + loss
         loss_t.backward()
         optimizer_f.step()
