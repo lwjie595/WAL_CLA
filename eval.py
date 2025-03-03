@@ -35,6 +35,8 @@ parser.add_argument('--dataset', type=str, default='multi_all',
                     help='the name of dataset, multi is large scale dataset')
 parser.add_argument('--lambda_CLA', type=float, default=0.05, metavar='LAM',
                     help='lamda for CLA')
+parser.add_argument('--lambda_WAL', type=float, default=0.1, metavar='LAM',
+                    help='lamda for WAL')
 args = parser.parse_args()
 print('dataset %s source %s target %s network %s' %
       (args.dataset, args.source, args.target, args.net))
